@@ -1,0 +1,23 @@
+<footer id="footer">
+  <% if (theme.sidebar==='bottom' ){ %>
+    <%- partial('_partial/sidebar') %>
+      <% } %>
+        <div class="outer">
+          <div id="footer-info" class="inner">
+            &copy; <%= date(new Date(), 'YYYY' ) %> <%= config.author || config.title %>
+                <span style="margin-left: 20px;">
+                  <a href="http://www.beian.miit.gov.cn/" target="_blank" style="color: #999;">
+                    <%= config.icp.text %>
+                  </a>
+                </span>
+                <span style=" margin-left: 20px;">
+                  <img src="//cdn-ng.ouyeel.com/statics/public2/images/beian.png" height="16" width="16">
+                  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32090302000288" target="_blank" style="color: #999;">
+                    <%= config.gongan.text %>
+                  </a>
+                </span>
+                <br>
+                <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank"  style="color: #999;">Hexo</a>
+          </div>
+        </div>
+</footer>
